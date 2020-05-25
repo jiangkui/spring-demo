@@ -3,7 +3,7 @@ package com.ljk.spring.demo.service;
 /**
  * Bean 实现类型 Service
  */
-public interface BeanImplTypeService {
+public interface BeanTypeService {
 
     String showType();
 }

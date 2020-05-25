@@ -1,6 +1,6 @@
 package com.ljk.spring.demo.controller;
 
-import com.ljk.spring.demo.service.BeanImplTypeService;
+import com.ljk.spring.demo.service.BeanTypeService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,13 +17,14 @@ import java.util.List;
 public class TestController {
 
     @Autowired
-    private List<BeanImplTypeService> beanImplTypeServiceList;
+    private List<BeanTypeService> beanTypeServiceList;
 
     @RequestMapping("/all")
-    public void showAllType() {
-        for (BeanImplTypeService beanImplTypeService : beanImplTypeServiceList) {
-            String showType = beanImplTypeService.showType();
+    public String showAllType() {
+        for (BeanTypeService beanTypeService : beanTypeServiceList) {
+            String showType = beanTypeService.showType();
             System.out.println("showType = " + showType);
         }
+        return "ok";
     }
 }

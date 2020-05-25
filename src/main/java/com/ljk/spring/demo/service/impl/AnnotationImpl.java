@@ -1,12 +1,13 @@
-package com.ljk.spring.demo.service;
+package com.ljk.spring.demo.service.impl;
 
+import com.ljk.spring.demo.service.BeanTypeService;
 import org.springframework.stereotype.Service;
 
 /**
  * 注解类型 Bean
  */
 @Service
-public class AnnotationTypeImpl implements BeanImplTypeService {
+public class AnnotationImpl implements BeanTypeService {
 
     @Override
     public String showType() {

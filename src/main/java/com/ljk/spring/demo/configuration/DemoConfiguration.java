@@ -1,6 +1,6 @@
 package com.ljk.spring.demo.configuration;
 
-import com.ljk.spring.demo.service.ConfigurationTypeImpl;
+import com.ljk.spring.demo.service.impl.ConfigurationImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class DemoConfiguration {
 
     @Bean
-    public ConfigurationTypeImpl testServiceC() {
-        return new ConfigurationTypeImpl();
+    public ConfigurationImpl testServiceC() {
+        return new ConfigurationImpl();
     }
 }
