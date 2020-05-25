@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration status="debug" monitorInterval="30">
+    <Appenders>
+        <!-- 控制台日志 -->
+        <Console name="console_out_appender" target="SYSTEM_OUT">
+            <!-- 输出日志的格式 -->
+            <PatternLayout pattern="[%4p] [%t] %d{yyyy-MM-dd HH:mm:ss} (%F:%L) %m%n"/>
+        </Console>
+
+        <!-- error日志 -->
+        <XMDFile name="ERROR-LOG" fileName="error.log">
+            <ThresholdFilter level="error" onMatch="ACCEPT" onMismatch="DENY"/>
+        </XMDFile>
+
+        <!-- info日志 -->
+        <XMDFile name="INFO-LOG" fileName="info.log">
+            <ThresholdFilter level="info" onMatch="ACCEPT" onMismatch="DENY"/>
+        </XMDFile>
+    </Appenders>
+
+    <Loggers>
+        <Root level="debug" includeLocation="true">
+            <!-- Console日志是同步、阻塞的，推荐只在本地调试时使用，线上将该配置去掉-->
+            <appender-ref ref="console_out_appender"/>
+            <AppenderRef ref="ERROR-LOG"/>
+            <AppenderRef ref="INFO-LOG"/>
+            <AppenderRef ref="CAT-LOG"/>
+        </Root>
+    </Loggers>
+</configuration>
