@@ -7,8 +7,10 @@ import com.ljk.spring.demo.service.BeanTypeService;
  */
 public class ConfigurationImpl implements BeanTypeService {
 
+    private String name = "ConfigurationTypeImpl";
+
     @Override
     public String showType() {
-        return "ConfigurationTypeImpl";
+        return name;
     }
 }

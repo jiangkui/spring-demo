@@ -9,8 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class AnnotationImpl implements BeanTypeService {
 
+    private String name = "AnnotationTypeImpl";
+
     @Override
     public String showType() {
-        return "AnnotationTypeImpl";
+        return name;
     }
 }

@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 public class DemoConfiguration {
 
     @Bean
-    public ConfigurationImpl testServiceC() {
+    public ConfigurationImpl configurationImpl() {
         return new ConfigurationImpl();
     }
 }
