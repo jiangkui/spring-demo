@@ -1,4 +1,4 @@
-package com.ljk.spring.demo.controller;
+package com.sankuai.meituan.spring.demo.controller;
 
 import com.ljk.spring.demo.service.BeanTypeService;
 import lombok.extern.slf4j.Slf4j;

@@ -1,4 +1,4 @@
-package com.ljk.spring.demo.configuration;
+package com.sankuai.meituan.spring.demo.configuration;
 
 import com.ljk.spring.demo.service.impl.ConfigurationImpl;
 import org.springframework.context.annotation.Bean;

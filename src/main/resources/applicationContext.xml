@@ -10,5 +10,5 @@
     <context:annotation-config/>
     <context:component-scan base-package="com.ljk.spring"/>
 
-    <bean id="xmlBean" class="com.ljk.spring.demo.service.impl.XMLImpl"/>
+    <bean id="xmlImpl" class="com.ljk.spring.demo.service.impl.XMLImpl"/>
 </beans>
